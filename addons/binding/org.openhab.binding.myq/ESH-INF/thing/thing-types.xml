@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="myq"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+        xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- Sample Thing Type -->
+    <thing-type id="myqClient">
+        <label>MyQ Client</label>
+        <description>Control a LiftMaster MyQ Device</description>
+
+        <channels>
+            <channel id="status" typeId="garage-door-status"/>
+            <channel id="door" typeId="garage-door" />
+            
+        </channels>
+    </thing-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="garage-door-status">
+        <item-type>Contact</item-type>
+        <label>Garage Door Status</label>
+        <description>Provides the status of the Garage Door (Open, Closed, Opening, Stopped)</description>
+    </channel-type>
+
+    <!-- Sample Channel Type -->
+    <channel-type id="garage-door">
+        <item-type>Switch</item-type>
+        <label>Garage Door</label>
+        <description>Opens or Closes Garage Door</description>
+    </channel-type>
+    
+</thing:thing-descriptions>
